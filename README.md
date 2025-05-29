@@ -30,13 +30,23 @@ These apps are preinstalled and ready to go:
 
 ## 🧩 Optional Flatpaks via Yafti
 
+## 🧩 Optional Flatpaks via Yafti
+
 Available during onboarding:
 
-- GIMP
+- [GIMP](https://flathub.org/apps/org.gimp.GIMP)
+- [Blender](https://flathub.org/apps/org.blender.Blender)
+- [OBS Studio](https://flathub.org/apps/com.obsproject.Studio)
+- [Kdenlive](https://flathub.org/apps/org.kde.kdenlive)
+- [Signal](https://flathub.org/apps/org.signal.Signal)
+- [Slack](https://flathub.org/apps/com.slack.Slack)
+- [Zoom](https://flathub.org/apps/us.zoom.Zoom)
+- [Microsoft Teams](https://flathub.org/apps/com.microsoft.Teams)
+- [Solaar](https://flathub.org/apps/org.solaar.Solaar)
 
 ## 📥 RPM Packages
 
-Included as native packages:
+Included as native packages for Carestack remote support:
 
 - Splashtop Streamer
 
