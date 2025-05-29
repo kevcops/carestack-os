@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Carestack
+Description=Carestack OS static splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/carestack-plymouth
+ScriptFile=/usr/share/plymouth/themes/carestack-plymouth/carestack.script

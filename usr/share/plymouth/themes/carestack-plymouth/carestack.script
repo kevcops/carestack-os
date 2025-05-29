@@ -1,0 +1,29 @@
+
+wallpaper_image = Image("logo.png");
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+image_width = Image.GetWidth(wallpaper_image);
+image_height = Image.GetHeight(wallpaper_image);
+x = (screen_width - image_width) / 2;
+y = (screen_height - image_height) / 2;
+
+Window.SetBackgroundTopColor(0.027, 0.271, 0.392);  # Dark blue
+Window.SetBackgroundBottomColor(0.027, 0.271, 0.392);
+
+Image.Draw(wallpaper_image, x, y, 255);
+
+# Progress dots
+dot_spacing = 40;
+dot_radius = 8;
+dot_y = y + image_height + 40;
+dot_x_start = screen_width / 2 - dot_spacing;
+
+for (i = 0; i < 3; i++) {
+    offset = i * dot_spacing;
+    dot = Sprite.Circle(dot_radius, 255, 255, 255, 255);
+    Sprite.SetPosition(dot, dot_x_start + offset, dot_y);
+    Sprite.SetZ(dot, 1000);
+    Sprite.Animate(dot, "opacity", 1.0, 0.0, 1.5, i * 0.3);
+    Sprite.Animate(dot, "opacity", 0.0, 1.0, 1.5, i * 0.3 + 1.5);
+    Sprite.SetLoop(dot, TRUE);
+}
