@@ -19,9 +19,6 @@ modules:
   - type: plymouth
     name: carestack-os
 
-  - type: wallpaper
-    path: usr/share/wallpapers/CarestackOS/default.jpg
-
   - type: skel
     paths:
       - etc/skel/.config
