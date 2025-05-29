@@ -1,49 +1,61 @@
 - type: input
   id: carestack_office_id
-  title: "CareStack Office ID (Optional)"
-  description: |
-    Please enter your CareStack Office ID to configure your CareStack integration.
+  title: CareStack Office ID (Optional)
+  description: 'Please enter your CareStack Office ID to configure your CareStack
+    integration.
+
 
     If you skip this step, you can add it later in Settings > Carestack OS Updater.
 
-  placeholder: "Enter Office ID here..."
-
+    '
+  placeholder: Enter Office ID here...
 - type: message
-  title: "Welcome to Carestack OS!"
-  description: |
-    Carestack OS is optimized for dental practices, with CareStack and remote support integrations,
+  title: Welcome to Carestack OS!
+  description: 'Carestack OS is optimized for dental practices, with CareStack and
+    remote support integrations,
+
     curated KDE experience, and secure defaults.
+
 
     On the next screen, you can choose additional apps to install.
 
+    '
 - type: packages
-  title: "Optional Apps"
-  description: "Choose any optional apps you'd like to install:"
+  title: Creative Tools
+  description: 'Optional creative tools to install:'
   selections:
-    - name: GIMP
-      package: org.gimp.GIMP
-      description: "Advanced image editor (like Photoshop)"
-    - name: Blender
-      package: org.blender.Blender
-      description: "3D modeling, animation, and rendering"
-    - name: OBS Studio
-      package: com.obsproject.Studio
-      description: "Video recording and livestreaming"
-    - name: Kdenlive
-      package: org.kde.kdenlive
-      description: "Non-linear video editor"
-    - name: Signal
-      package: org.signal.Signal
-      description: "Private encrypted messaging app"
-    - name: Slack
-      package: com.slack.Slack
-      description: "Team messaging and collaboration"
-    - name: Zoom
-      package: us.zoom.Zoom
-      description: "Video conferencing and meetings"
-    - name: Microsoft Teams
-      package: com.microsoft.Teams
-      description: "Microsoft collaboration platform"
-    - name: Solaar
-      package: org.solaar.Solaar
-      description: "Logitech device battery & settings manager"
+  - name: GIMP
+    package: org.gimp.GIMP
+    description: Advanced image editor (like Photoshop)
+  - name: Blender
+    package: org.blender.Blender
+    description: 3D modeling, animation, and rendering
+  - name: Kdenlive
+    package: org.kde.kdenlive
+    description: Non-linear video editor
+  - name: OBS Studio
+    package: com.obsproject.Studio
+    description: Video recording and livestreaming
+- type: packages
+  title: Communication
+  description: 'Optional communication to install:'
+  selections:
+  - name: Signal
+    package: org.signal.Signal
+    description: Private encrypted messaging app
+  - name: Slack
+    package: com.slack.Slack
+    description: Team messaging and collaboration
+  - name: Zoom
+    package: us.zoom.Zoom
+    description: Video conferencing and meetings
+  - name: Microsoft Teams
+    package: com.microsoft.Teams
+    description: Microsoft collaboration platform
+- type: packages
+  title: Utilities
+  description: 'Optional utilities to install:'
+  selections:
+  - name: Solaar
+    package: org.solaar.Solaar
+    description: Logitech device battery & settings manager

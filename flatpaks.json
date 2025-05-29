@@ -2,41 +2,49 @@
   {
     "app": "org.chromium.Chromium",
     "runtime": "org.kde.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Fast and secure open-source web browser"
   },
   {
     "app": "org.mozilla.Thunderbird",
     "runtime": "org.freedesktop.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Email client and calendar"
   },
   {
     "app": "com.usebottles.bottles",
     "runtime": "org.freedesktop.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Run Windows software using Wine in isolated environments"
   },
   {
     "app": "org.gnome.Boxes",
     "runtime": "org.gnome.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Virtual machine manager"
   },
   {
     "app": "com.github.PintaProject.Pinta",
     "runtime": "org.freedesktop.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Lightweight image editing tool"
   },
   {
     "app": "com.tailscale.Tailscale",
     "runtime": "org.freedesktop.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Zero-config VPN for secure networking"
   },
   {
     "app": "org.libreoffice.LibreOffice",
     "runtime": "org.freedesktop.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Full office suite: docs, spreadsheets, presentations"
   },
   {
     "app": "org.videolan.VLC",
     "runtime": "org.freedesktop.Platform",
-    "branch": "stable"
+    "branch": "stable",
+    "description": "Versatile media player for audio/video formats"
   }
 ]
