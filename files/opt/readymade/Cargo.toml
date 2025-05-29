@@ -1,0 +1,132 @@
+[package]
+name = "readymade"
+version = "0.12.2"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Install ready-made distribution images"
+repository = "https://github.com/FyraLabs/readymade"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+color-eyre = "=0.6.3"
+gtk = { version = "0.9", package = "gtk4", features = ["v4_10"] }
+relm4 = { version = "0.9", features = ["macros"] }
+libhelium = { version = "0.10.0", features = ["gtk_v4_10", "v1_6"] }
+tracing = { version = "0.1.41", features = ["log"] }
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+tracing-appender = "0.2"
+itertools = "0.14.0"
+thiserror = "2.0.12"
+gnome-desktop = "0.4.2"
+paste = "1.0.15"
+tempfile = "3.19.1"
+lsblk = "0.6.1"
+const_format = "0.2.34"
+sys-mount = "3.0.1"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+bytesize = { version = "2.0.1", features = ["serde"] }
+serde_with = "3.12.0"
+uuid = { version = "1.16.0", features = ["serde"] }
+tiffin = { version = "0.3.2" }
+tracing-journald = "0.3.1"
+rayon = "1.10.0"
+strip-ansi-escapes = "0.2.1"
+toml = "0.8.22"
+serde_valid = { version = "1.0.5", features = ["toml"] }
+nix = { version = "0.30.1", features = ["fs", "mount", "user"] }
+backhand = "0.22.0"
+enum_dispatch = "0.3.13"
+scopeguard = "1.2.0"
+tracing-test = "0.2.5"
+serde-systemd-unit = { path = "./serde-systemd-unit" }
+format-bytes = "0.3.0"
+ipc-channel = { version = "0.19.0", features = ["async"] }
+# FIXME: we should remove this crate (somehow this pulls in gettext… not so great)
+freedesktop-desktop-entry = "0.7.11"
+jwalk = "0.8.1"
+xattr = "1.5.0"
+filesystem-table = { version = "0.1.2", path = "./filesystem-table" }
+kurage = "0.1.4"
+uu_cp = { version = "0.0.30", features = [
+    "exacl",
+    "feat_acl",
+    "feat_selinux",
+    "selinux",
+], optional = true }
+i18n-embed = { version = "0.15.4", features = [
+    "desktop-requester",
+    "filesystem-assets",
+    "fluent-system",
+] }
+i18n-embed-fl = "0.9.4"
+rust-embed = { version = "8.7.1", features = ["include-exclude"] }
+with_builtin_macros = "0.1.0"
+no_color = "0.2.0"
+poly_l10n = "0.0.6"
+derivative = "2.2.0"
+parking_lot = "0.12.3"
+
+# [dependencies.os-detect]
+# git = "https://github.com/FyraLabs/distinst"
+# branch = "master"
+
+[features]
+uutils = ["dep:uu_cp"]
+
+
+[build-dependencies]
+glib-build-tools = "0.20.0"
+
+[lints.clippy]
+# cargo = { level = "warn", priority = -1 }
+complexity = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+suspicious = { level = "warn", priority = -1 }
+
+disallowed-macros = "deny"
+excessive-nesting = "warn"
+
+# arithmetic_side_effects = "warn"
+assertions_on_result_states = "warn"
+clone_on_ref_ptr = "warn"
+create_dir = "warn"
+empty_enum_variants_with_brackets = "warn"
+empty_structs_with_brackets = "warn"
+field_scoped_visibility_modifiers = "deny"
+format_push_string = "warn"
+get_unwrap = "warn"
+if_then_some_else_none = "warn"
+impl_trait_in_params = "warn"
+indexing_slicing = "warn"
+infinite_loop = "deny"
+let_underscore_must_use = "deny"
+let_underscore_untyped = "warn"
+multiple_inherent_impl = "warn"
+needless_raw_strings = "warn"
+rc_buffer = "warn"
+rc_mutex = "deny"
+redundant_type_annotations = "warn"
+ref_patterns = "warn"
+renamed_function_params = "warn"
+rest_pat_in_fully_bound_structs = "warn"
+semicolon_outside_block = "warn"
+str_to_string = "warn"
+string_lit_chars_any = "warn"
+string_to_string = "warn"
+tests_outside_test_module = "warn"
+todo = "warn"
+try_err = "warn"
+undocumented_unsafe_blocks = "deny"
+unimplemented = "warn"
+unneeded_field_pattern = "warn"
+unwrap_in_result = "warn"
+
+equatable_if_let = "allow"
+
+
+[workspace]
+members = ["filesystem-table", "serde-systemd-unit"]

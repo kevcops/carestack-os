@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Carestack Setup Wizard
+Exec=/usr/local/bin/readymade --config /usr/share/readymade.yml
+Type=Application
+X-GNOME-Autostart-enabled=true
+OnlyShowIn=KDE;
