@@ -1,8 +1,8 @@
 name: carestack-os
 description: Custom Fedora Kinoite image for Carestack dental practices
 
-base-image: ghcr.io/ublue-os/kinoite
-image-version: image-versions.yaml
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 42
 
 modules:
   - type: files
