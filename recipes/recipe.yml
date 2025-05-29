@@ -7,7 +7,6 @@ image-version: 42
 modules:
   - type: files
     source: local
-    include: files
 
   - type: rpm-ostree
     source: local
