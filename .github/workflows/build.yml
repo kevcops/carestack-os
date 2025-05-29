@@ -29,11 +29,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y just jq
-
-      - name: Build and Push Image
-        run: |
-          just build
+      - name: Build with bluebuild
+        uses: blue-build/github-actions@v1

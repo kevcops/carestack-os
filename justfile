@@ -2,10 +2,10 @@ default:
 	build
 
 build:
-	rpm-ostree compose image recipes/recipe.yml
+	bluebuild build
 
 build-iso:
-	rpm-ostree compose installer recipes/recipe.yml --nomacboot --output-dir=artifacts
+	bluebuild build-iso
 
 clean:
 	rm -rf artifacts *.iso *.qcow2
