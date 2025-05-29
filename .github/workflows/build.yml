@@ -30,4 +30,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build with bluebuild
-        uses: blue-build/github-actions@v1
+        uses: blue-build/github-action@v1
