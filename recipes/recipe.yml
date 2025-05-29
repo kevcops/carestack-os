@@ -6,6 +6,8 @@ image-version: 42
 
 modules:
   - from: ./modules/readymade
+    source: local
+
   - type: files
     source: local
 
