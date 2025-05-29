@@ -1,10 +1,27 @@
 name: carestack-os
 description: Custom Fedora Kinoite image for Carestack dental practices
-base-image: ghcr.io/ublue-os/kinoite-main
-flatpaks: flatpaks.json
-packages: packages.json
-install:
-  - yafti
-  - plymouth-theme
-  - wallpaper
-  - kde-config
+
+image-version: image-versions.yaml
+
+modules:
+  - type: files
+    source: files
+
+  - type: system-packages
+    packages: packages.json
+
+  - type: flatpaks
+    manifest: flatpaks.json
+
+  - type: yafti
+    manifest: yafti.yaml
+
+  - type: plymouth
+    name: carestack-os
+
+  - type: wallpaper
+    path: usr/share/wallpapers/CarestackOS/default.jpg
+
+  - type: skel
+    paths:
+      - etc/skel/.config
