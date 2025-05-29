@@ -1,43 +1,72 @@
-# carestack-os &nbsp; [![bluebuild build badge](https://github.com/kevcops/carestack-os/actions/workflows/build.yml/badge.svg)](https://github.com/kevcops/carestack-os/actions/workflows/build.yml)
+# Carestack OS
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+**Carestack OS** is a customized, immutable Fedora-based Linux distribution built using [uBlue](https://blue-build.org). It is tailored for dental and medical office environments, offering a streamlined experience with secure remote support, productivity apps, and Carestack integration out of the box.
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🧱 Base Image
 
-## Installation
+Carestack OS is based on the [uBlue main image](https://blue-build.org/images/ublue-main/), using **Kinoite** as the base for an immutable and secure desktop experience with KDE Plasma.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## ✨ Key Features
 
-To rebase an existing atomic Fedora installation to the latest build:
+- ⚡ Immutable OS with automatic updates via OSTree
+- 🎨 KDE Plasma desktop environment
+- 🦷 Tight integration with Carestack (via Chromium app)
+- 🔒 Secure remote support via Tailscale and Splashtop
+- 🧩 Flatpak-first app installation model
+- 🛠️ First-boot customization via Yafti
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/kevcops/carestack-os:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kevcops/carestack-os:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+## 📦 Preinstalled Flatpaks
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+These apps are preinstalled and ready to go:
 
-## ISO
+- [Chromium](https://flathub.org/apps/org.chromium.Chromium)
+- [Thunderbird](https://flathub.org/apps/org.mozilla.Thunderbird)
+- [LibreOffice](https://flathub.org/apps/org.libreoffice.LibreOffice)
+- [VLC](https://flathub.org/apps/org.videolan.VLC)
+- [Pinta](https://flathub.org/apps/com.github.PintaProject.Pinta)
+- [Tailscale](https://flathub.org/apps/com.tailscale.Tailscale)
+- [GNOME Boxes](https://flathub.org/apps/org.gnome.Boxes)
+- [Bottles](https://flathub.org/apps/com.usebottles.bottles)
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+## 🧩 Optional Flatpaks via Yafti
 
-## Verification
+Available during onboarding:
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+- GIMP
+
+## 📥 RPM Packages
+
+Included as native packages:
+
+- Splashtop Streamer
+
+## 🚀 Live ISO
+
+The ISO includes a **Live Environment** and **Install Option**. Users can test Carestack OS before installing.
+
+## 🖼️ Branding
+
+- 💚 Primary branding color: **Green**
+- 🔵 Secondary branding color: **Dark Blue**
+- 🚀 Custom KDE launcher icon
+- 🎞️ Plymouth boot splash with pulsing 3-dot animation
+- 🖼️ Default wallpaper set on live and installed systems
+
+## 🧰 Developer Tools
+
+- GitHub Actions CI for builds
+- Image signing with [Cosign](https://docs.sigstore.dev/cosign/overview)
+
+## 📦 Container Image
+
+All builds are pushed to [ghcr.io/kevcops/carestack-os](https://github.com/kevcops/carestack-os/pkgs/container/carestack-os)
+
+## 🔐 Signing
+
+Images are signed with `cosign.pub` (included in this repo). Validate with:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/kevcops/carestack-os
-```
+cosign verify ghcr.io/kevcops/carestack-os
+
+💙 Powered by uBlue
+Carestack OS is built with blue-build and powered by Fedora’s universal base image technology.
