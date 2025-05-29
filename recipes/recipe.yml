@@ -6,7 +6,8 @@ image-version: 42
 
 modules:
   - type: files
-    source: files
+    source: local
+    include: files
 
   - type: rpm-ostree
     source: local
@@ -14,6 +15,7 @@ modules:
 
   - type: yafti
     source: local
+    manifest: yafti.yml
 
   - type: default-flatpaks
     source: local
