@@ -40,6 +40,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Sign with bluebuild
-        uses: blue-build/github-action@v2
+        uses: blue-build/github-action@c42b007d0a27669c82910f823bc869206fc3a10e
         with:
           cosign_private_key: ${{ secrets.COSIGN_PRIVATE_KEY }}
