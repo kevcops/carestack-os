@@ -1,0 +1,42 @@
+[
+  {
+    "app": "org.chromium.Chromium",
+    "runtime": "org.kde.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "org.mozilla.Thunderbird",
+    "runtime": "org.freedesktop.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "com.usebottles.bottles",
+    "runtime": "org.freedesktop.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "org.gnome.Boxes",
+    "runtime": "org.gnome.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "com.github.PintaProject.Pinta",
+    "runtime": "org.freedesktop.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "com.tailscale.Tailscale",
+    "runtime": "org.freedesktop.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "org.libreoffice.LibreOffice",
+    "runtime": "org.freedesktop.Platform",
+    "branch": "stable"
+  },
+  {
+    "app": "org.videolan.VLC",
+    "runtime": "org.freedesktop.Platform",
+    "branch": "stable"
+  }
+]

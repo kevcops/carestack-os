@@ -1,0 +1,3 @@
+base-image: ghcr.io/ublue-os/kinoite-main
+timestamp: latest
+version: 1.0.0

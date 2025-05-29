@@ -1,0 +1,19 @@
+flatpaks:
+  - name: GIMP
+    flatpak: org.gimp.GIMP
+  - name: Blender
+    flatpak: org.blender.Blender
+  - name: OBS Studio
+    flatpak: com.obsproject.Studio
+  - name: Kdenlive
+    flatpak: org.kde.kdenlive
+  - name: Signal
+    flatpak: org.signal.Signal
+  - name: Slack
+    flatpak: com.slack.Slack
+  - name: Zoom
+    flatpak: us.zoom.Zoom
+  - name: Microsoft Teams
+    flatpak: com.microsoft.Teams
+  - name: Solaar
+    flatpak: org.solaar.Solaar
