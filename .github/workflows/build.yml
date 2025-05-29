@@ -4,16 +4,27 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  bluebuild:
     name: Build and Push OCI Image
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
       id-token: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        recipe:
+          - recipe.yml
 
     steps:
       - name: Checkout repository
@@ -40,6 +51,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Sign with bluebuild
-        uses: blue-build/github-action@c42b007d0a27669c82910f823bc869206fc3a10e
+        uses: blue-build/github-action@v1.8.1
         with:
+          recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.COSIGN_PRIVATE_KEY }}
+          registry_token: ${{ secrets.GITHUB_TOKEN }}
+          maximize_build_space: true
