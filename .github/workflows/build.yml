@@ -42,4 +42,4 @@ jobs:
       - name: Build and Sign with bluebuild
         uses: blue-build/github-action@v1
         with:
-          args: --sign
+          cosign_private_key: ${{ secrets.COSIGN_PRIVATE_KEY }}
