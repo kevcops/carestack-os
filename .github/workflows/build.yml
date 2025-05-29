@@ -31,3 +31,5 @@ jobs:
 
       - name: Build with bluebuild
         uses: blue-build/github-action@v1
+        with:
+          args: --no-sign
