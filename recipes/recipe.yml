@@ -5,6 +5,11 @@ base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 42
 
 modules:
+  - type: command
+    source: local
+    description: "🧪 Debug: List contents of /tmp/files"
+    command: "find /tmp/files || echo '/tmp/files not found'"
+
   - type: files
     source: local
 
