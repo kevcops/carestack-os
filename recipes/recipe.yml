@@ -5,10 +5,6 @@ base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 42
 
 modules:
-  - type: readymade
-    from: ./modules/readymade
-    source: local
-
   - type: files
     source: local
 
