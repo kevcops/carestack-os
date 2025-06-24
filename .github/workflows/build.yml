@@ -51,7 +51,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Sign with bluebuild
-        uses: blue-build/github-action@v1.8.1
+        uses: blue-build/github-action@v1.8.2
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.COSIGN_PRIVATE_KEY }}
